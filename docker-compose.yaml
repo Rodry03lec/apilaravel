@@ -1,0 +1,20 @@
+version: '3.8' # Define the version of Docker Compose
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: bd_proyecto
+      MYSQL_USER: rodrigo
+      MYSQL_PASSWORD: rodry
+    ports:
+      - "3309:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
+

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UsuarioControlador;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,5 @@ Route::prefix('/v1/auth')->group(function(){
 });
 
 
+//CRUD DE USUARIOS
+Route::apiResource('usuario', UsuarioControlador::class);
