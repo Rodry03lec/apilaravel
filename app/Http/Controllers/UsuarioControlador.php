@@ -14,7 +14,7 @@ class UsuarioControlador extends Controller
      */
     public function index()
     {
-        $usuarios = User::get();
+        $usuarios = User::OrderBy('id', 'desc')->get();
         return response()->json($usuarios, 200);
     }
 
